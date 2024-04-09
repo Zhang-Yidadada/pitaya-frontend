@@ -1,15 +1,17 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
-import router from './router'
-import 'virtual:uno.css'
+import { setupRouter } from './router'
+import './styles/index.js'
+
+import { setupNProgress } from './plugins/nprogress'
 
 const app = createApp(App)
 
+setupNProgress()
+
 app.use(createPinia())
-app.use(router)
+setupRouter(app)
 
 app.mount('#app')
