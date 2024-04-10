@@ -1,11 +1,11 @@
 {
-  "name": "@pkg/layout",
+  "name": "@pkg/utils",
   "version": "1.0.0",
   "description": "",
   "exports": {
     "*": "./index.js"
   },
   "dependencies": {
-    "@pkg/utils": "workspace:^"
+    "lodash": "^4.17.21"
   }
 }

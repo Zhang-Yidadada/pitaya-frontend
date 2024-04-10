@@ -84,6 +84,12 @@ importers:
 
   packages/layout:
     dependencies:
+      '@pkg/utils':
+        specifier: workspace:^
+        version: link:../utils
+
+  packages/utils:
+    dependencies:
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
