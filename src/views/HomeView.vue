@@ -1,10 +1,18 @@
-<script setup></script>
+<script setup>
+import { SidebarMenu, GlobalHeader } from '@pkg/layout'
+
+console.log(SidebarMenu)
+</script>
 
 <template>
   <div flex h-full>
-    <aside w-400px>sidebar</aside>
+    <aside w-220px>
+      <SidebarMenu></SidebarMenu>
+    </aside>
     <section flex-1 flex flex-col>
-      <header h-40px>header</header>
+      <header h-40px>
+        <GlobalHeader></GlobalHeader>
+      </header>
       <main flex-1>content</main>
       <footer h-40px>footer</footer>
     </section>

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "exports": {
-    "*": "./index.js"
+    ".": "./index.js"
   },
   "dependencies": {
+    "@pkg/components": "workspace:^",
     "@pkg/utils": "workspace:^"
   }
 }
