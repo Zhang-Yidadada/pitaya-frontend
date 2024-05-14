@@ -12,11 +12,11 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-    // 'vue/multi-word-component-names': [
-    //   'warn',
-    //   {
-    //     ignores: ['navbar']
-    //   }
-    // ]
+    'vue/multi-word-component-names': [
+      'warn',
+      {
+        ignores: ['index']
+      }
+    ]
   }
 }

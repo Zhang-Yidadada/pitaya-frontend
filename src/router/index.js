@@ -8,7 +8,9 @@ const router = createRouter({
   routes: [...customRoutes]
 })
 
-export function setupRouter(app) {
+export async function setupRouter(app) {
   app.use(router)
   createRouterGuard(router)
+
+  await router.isReady()
 }

@@ -1,6 +1,9 @@
 <script setup>
-import { defineOptions } from 'vue'
 defineOptions({ name: 'SidebarMenu' })
+
+
+import { useRouter } from 'vue-router';
+const router = useRouter()
 
 import { menu } from '../mock/menu'
 
@@ -29,6 +32,8 @@ const menuOptions = handleMenuParse(menu)
 
 function handleUpdateValue(key, item) {
   console.log(key, item)
+  console.log(router);
+  router.push({ name: 'online' })
 }
 </script>
 
