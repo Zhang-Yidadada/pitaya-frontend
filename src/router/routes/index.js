@@ -1,8 +1,13 @@
 export const customRoutes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: () => import('@/layout/base/index.vue')
+  },
+  {
+    name: 'login',
+    path: '/login',
+    component: () => import('@/views/common/login/index.vue')
   },
   {
     name: 'monitor',
@@ -20,13 +25,5 @@ export const customRoutes = [
         component: () => import('@/views/monitor/schedule/index.vue')
       }
     ]
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('@/views/AboutView.vue')
   }
 ]
