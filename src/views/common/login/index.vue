@@ -17,7 +17,7 @@ function handlePasswordInput(val) {
 
       <n-form :model="model" size="large" :show-label="false">
         <n-form-item path="age">
-          <n-input placeholder="请输入用户名" v-model:value="model.age" @keydown.enter.prevent />
+          <n-input :placeholder="$t('password')" v-model:value="model.age" @keydown.enter.prevent />
         </n-form-item>
         <n-form-item path="password">
           <n-input placeholder="请输入密码" v-model:value="model.password" type="password" @input="handlePasswordInput"
