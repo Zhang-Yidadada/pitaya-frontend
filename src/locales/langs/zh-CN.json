@@ -1,0 +1,22 @@
+{
+  "username": "用户名",
+  "login": {
+    "message": {
+      "placeholder": {
+        "username": "请输入用户名",
+        "password": "请输入密码"
+      },
+      "tips": {},
+      "powerby": "Power by Yida Lab"
+    },
+    "field": {},
+    "button": {
+      "login": "登陆"
+    }
+  },
+  "system": {
+    "info": {
+      "name": "Pitaya Management"
+    }
+  }
+}
