@@ -1,9 +1,18 @@
 <script setup>
 import { ref } from 'vue'
+
+import { useAuthStore } from '@/store/modules/auth'
+
 let model = ref({})
 
 function handlePasswordInput(val) {
   console.log(val)
+}
+
+const authStore = useAuthStore()
+function handleAccountLogin() {
+  console.log(authStore)
+  authStore.login(model.value.username, model.value.password)
 }
 </script>
 
@@ -11,21 +20,31 @@ function handlePasswordInput(val) {
   <div h-full flex justify-center items-center>
     <n-card w-400px rd-12px>
       <template #header>
-        <div text-center>{{ $t("system.info.name") }}</div>
+        <div text-center>{{ $t('system.info.name') }}</div>
       </template>
       <!-- <template #header-extra>header-extra</template> -->
 
       <n-form :model="model" size="large" :show-label="false">
-        <n-form-item path="age">
-          <n-input :placeholder="$t('login.message.placeholder.username')" v-model:value="model.age"
-            @keydown.enter.prevent />
+        <n-form-item path="username">
+          <n-input
+            :placeholder="$t('login.message.placeholder.username')"
+            v-model:value="model.username"
+            @keydown.enter.prevent
+          />
         </n-form-item>
         <n-form-item path="password">
-          <n-input :placeholder="$t('login.message.placeholder.password')" v-model:value="model.password" type="password"
-            @input="handlePasswordInput" @keydown.enter.prevent />
+          <n-input
+            :placeholder="$t('login.message.placeholder.password')"
+            v-model:value="model.password"
+            type="password"
+            @input="handlePasswordInput"
+            @keydown.enter.prevent
+          />
         </n-form-item>
         <div flex>
-          <n-button w-full type="primary">{{ $t('login.button.login') }}</n-button>
+          <n-button @click="handleAccountLogin" w-full type="primary">{{
+            $t('login.button.login')
+          }}</n-button>
         </div>
       </n-form>
 
