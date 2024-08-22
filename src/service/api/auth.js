@@ -1,9 +1,9 @@
 import { request } from '../request'
 
-export function fetchLogin(username, password) {
+export function fetchLogin(account, password) {
   return request({
-    url: '/auth/login',
+    url: '/sys/auth/b/login',
     method: 'post',
-    data: { username, password }
+    data: { account, password }
   })
 }

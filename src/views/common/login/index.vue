@@ -12,7 +12,7 @@ function handlePasswordInput(val) {
 const authStore = useAuthStore()
 function handleAccountLogin() {
   console.log(authStore)
-  authStore.login(model.value.username, model.value.password)
+  authStore.login(model.value.account, model.value.password)
 }
 </script>
 
@@ -25,10 +25,10 @@ function handleAccountLogin() {
       <!-- <template #header-extra>header-extra</template> -->
 
       <n-form :model="model" size="large" :show-label="false">
-        <n-form-item path="username">
+        <n-form-item path="account">
           <n-input
             :placeholder="$t('login.message.placeholder.username')"
-            v-model:value="model.username"
+            v-model:value="model.account"
             @keydown.enter.prevent
           />
         </n-form-item>
